@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'firebase_options.dart';
+import 'helpers/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
