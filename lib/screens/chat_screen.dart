@@ -41,13 +41,6 @@ class _ChatScreenState extends State<ChatScreen> {
     } catch (e) {}
   }
 
-  // void getMessages() async {
-  //   final messages = await _firestore.collection('messages').get();
-  //   for (var message in messages.docs) {
-  //     print(message.data());
-  //   }
-  // }
-
   void messagesStream() async {
     await for (var snapshot in _firestore.collection('messages').snapshots()) {
       // ignore: unused_local_variable
@@ -62,11 +55,10 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: null,
         actions: <Widget>[
           IconButton(
-              icon: const Icon(Icons.close),
+              icon: const Icon(Icons.exit_to_app),
               onPressed: () {
-                messagesStream();
-                //_auth.signOut();
-                //Navigator.pop(context);
+                _auth.signOut();
+                Navigator.pop(context);
               }),
         ],
         title: const Text('⚡️Chat'),
