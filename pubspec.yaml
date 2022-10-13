@@ -14,15 +14,29 @@ dependencies:
   firebase_core: ^1.24.0
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.10.0
   flutter_lints: ^2.0.1
+  flutter_native_splash: ^2.2.11
   modal_progress_hud: ^0.1.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "images/logo.png"
+
 flutter:
   uses-material-design: true
 
   assets:
     - images/
+
+flutter_native_splash:
+  color: "#121010"
+  image: "images/logo.png"
+  android_12:
+    
+   
